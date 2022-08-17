@@ -6,7 +6,9 @@ main() => runApp(PerguntaApp());
 class PerguntaAppState extends State<PerguntaApp>{
   var perguntasSelecionada = 0;
   void responder(){
-    perguntasSelecionada++;
+    setState(() {
+      perguntasSelecionada++;
+    });
     print(perguntasSelecionada);
   }
 
