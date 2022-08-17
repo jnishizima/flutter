@@ -3,13 +3,13 @@ import 'package:flutter/widgets.dart';
 
 main() => runApp(PerguntaApp());
 
-class PerguntaAppState extends State<PerguntaApp>{
-  var perguntasSelecionada = 0;
-  void responder(){
+class _PerguntaAppState extends State<PerguntaApp>{
+  var _perguntasSelecionada = 0;
+  void _responder(){
     setState(() {
-      perguntasSelecionada++;
+      _perguntasSelecionada++;
     });
-    print(perguntasSelecionada);
+    print(_perguntasSelecionada);
   }
 
   @override
@@ -25,18 +25,18 @@ class PerguntaAppState extends State<PerguntaApp>{
         ),
         body: Column(
           children: <Widget>[
-            Text(perguntas.elementAt(perguntasSelecionada)),
+            Text(perguntas.elementAt(_perguntasSelecionada)),
             ElevatedButton(
               child: Text('Resposta 1'),
-              onPressed: responder,
+              onPressed: _responder,
             ),
             ElevatedButton(
               child: Text('Resposta 2'),
-              onPressed: responder,
+              onPressed: _responder,
             ),
             ElevatedButton(
               child: Text('Resposta 3'),
-              onPressed: responder,
+              onPressed: _responder,
             ),
           ],
         )
@@ -48,8 +48,8 @@ class PerguntaAppState extends State<PerguntaApp>{
 class PerguntaApp extends StatefulWidget {
 
   @override
-  PerguntaAppState createState() {
-    return PerguntaAppState();
+  _PerguntaAppState createState() {
+    return _PerguntaAppState();
   }
 
   
