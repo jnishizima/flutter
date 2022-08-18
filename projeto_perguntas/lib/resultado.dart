@@ -7,13 +7,13 @@ class Resultado extends StatelessWidget {
 
   String get fraseResultado {
     if (pontuacao < 8) {
-      return 'Parabéns!';
+      return 'Parabéns! \nPontos: $pontuacao';
     } else if (pontuacao < 12) {
-      return 'Você é bom!';
+      return 'Você é bom!\nPontos: $pontuacao';
     } else if (pontuacao < 16) {
-      return 'Impressionante!';
+      return 'Impressionante!\nPontos: $pontuacao';
     } else {
-      return 'Nível Jedi!';
+      return 'Nível Jedi!\nPontos: $pontuacao';
     }
   }
 
